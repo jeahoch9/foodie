@@ -1,0 +1,263 @@
+/* Base & Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #142d4c;
+  background: white;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Navigation bar */
+/* Navigation bar (sticky top) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #9fd3c7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+  padding: 0 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+/* Logo styling (left) */
+.navbar-header img {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Right-side menu container */
+.navbar-menu {
+  display: flex;
+  flex-direction: row; /* horizontal layout */
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navigation links */
+.navbar-menu a {
+  color: #142d4c;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 5px;
+}
+
+/* Active link */
+.navbar-menu a.active {
+  background-color: #385170;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Push content below navbar */
+body {
+  padding-top: 80px;
+  margin-bottom: 60px;
+}
+
+
+/* Main content */
+.content {
+  flex-grow: 1;
+  padding: 40px 30px;
+}
+
+.content section {
+  margin-bottom: 60px;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9fd3c7;
+  padding-bottom: 5px;
+  color: #9fd3c7;
+}
+
+.content h3 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.h2 {
+  color:#385170;
+}
+
+.cv{
+  color:#142d4c;
+}
+
+.ul li{
+  color:#142d4c;
+}
+
+.job, .edu, .links {
+  margin-bottom: 20px;
+}
+
+.job h4, .edu h4 {
+  margin-bottom: 4px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skills li {
+  background:#142d4c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.links {
+	border: 2px solid #9fd3c7;
+	background-color: #f0f0f0;
+	padding: 20px;
+	margin-bottom:60px;
+	overflow:visible;
+}
+
+/*Footer design*/
+footer{
+	z-index: 1;
+	position: relative;
+	background-color: #9fd3c7;
+	margin-top: -250px;
+	
+	height: auto;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	padding: 0 0 70px 4%;
+}
+footer > a{
+	position: relative;
+	margin-top: auto;
+	margin-bottom: 50px;
+}
+footer > .navbar-grid{
+	display: grid;
+	columns: 5;
+	width: 96%;
+	height: auto;
+
+	grid-template-columns: 32% 20% repeat(2, 15%) 10%;
+	column-gap: 2%;
+}
+footer > .navbar-grid > .contacts > div{
+	display: flex;
+	overflow-wrap: break-word;
+	flex-direction: row;
+	align-items: flex-start;
+}
+footer > .navbar-grid > .contacts > div > p{
+	width: 90%;
+	float: left;
+}
+footer > .navbar-grid > .contacts > div > img{
+	width: auto;
+	height: 1rem;
+	margin-top: 20px;
+	margin-right: 15px;
+	float: left;
+}
+footer > .navbar-grid > nav{
+	display: flex;
+	flex-direction: column;
+}
+footer > .navbar-grid > nav > a > p{
+	margin: 5px 0;
+}
+footer > .navbar-grid > .links{
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+}
+footer > .navbar-grid > .links a{
+	margin-right: 10px;
+}
+footer > .navbar-grid > .links ion-icon{
+	height: 2rem;
+	width: 2rem;
+}
+@media (max-width: 1000px){
+	footer > .navbar-grid{
+		grid-template-columns: 20% 26% repeat(2, 10%) 18%;
+		column-gap: 4%;
+	}
+	footer > .navbar-grid > .contacts > div{
+		flex-direction: column;
+	}
+	footer{
+		padding-bottom: 0px;
+		font-size: 0.9em;
+	}
+	footer > img{
+		margin-bottom: calc(15px + 1%);
+	}
+}
+/* Responsive / Mobile */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .content {
+    padding: 20px;
+  }
+}

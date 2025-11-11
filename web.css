@@ -167,7 +167,7 @@ body {
 /*Footer design*/
 footer{
 	z-index: 1;
-	position: relative;
+	position: fixed;
 	background-color: #9fd3c7;
 	margin-top: -250px;
 	
@@ -180,7 +180,7 @@ footer{
 	padding: 0 0 70px 4%;
 }
 footer > a{
-	position: relative;
+	position: fixed;
 	margin-top: auto;
 	margin-bottom: 50px;
 }

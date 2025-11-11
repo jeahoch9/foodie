@@ -167,9 +167,9 @@ body {
 /*Footer design*/
 footer{
 	z-index: 1;
-	position: fixed;
+	position: relative;
 	background-color: #9fd3c7;
-	margin-top: -250px;
+	margin-top: -550px;
 	
 	height: auto;
 	width: auto;
@@ -180,9 +180,9 @@ footer{
 	padding: 0 0 70px 4%;
 }
 footer > a{
-	position: fixed;
+	position: relative;
 	margin-top: auto;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 footer > .navbar-grid{
 	display: grid;

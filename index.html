@@ -33,31 +33,34 @@
   </br>
    </br>
 
-    <main class="content">
-      <section id="introduction">
-        <img src="pictures/me.enc" alt="me" size:32x32>
-      
-<p>Hello, my name is <b>Jeanne Hochart</b>. I have a master in <b>Biomedicine</b> and I have a strong interest in science communication, marketing and sales.
-
-If you have any question, please contact me by <a href="mailto:jeahochart@gmail.com">email</a> or by clicking on any link on the <a href="links.html">link tab.</a></p>
-      </section>
-    
-    </main>
-</body>
-</br>
-  </br>
-</br> 
-  </br>
-</br>
-  </br>
-  </br>
-</br> 
-  </br>
-</br>
-
-<!Map view>
-var map = L.map('map').setView([51.505, -0.09], 13)
-
+   <style>
+      #map {
+        height: 180px;
+      }
+    </style>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- define a the area the map will go into. Feel free to change the size as needed -->
+    <div id="map" style="width: 800px; height: 500px"></div>
+    <script>
+      var map = L.map("map").setView([51.505, -0.09], 13);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+    </script>
+  </body>
 
 <!Footer>
   <footer>
